@@ -176,7 +176,7 @@ a:hover{
 }
 
 .box2{
-    background-color: rgb(0,0,0, 0.3);
+    background-color: rgb(0,0,0, 0.5);
 }
 
 #ubicacion{
@@ -227,9 +227,7 @@ a:hover{
     display: flex; 
     flex-direction: column;
     justify-content: space-around;
-    padding: 1rem 0.7rem;  
-    
-    
+    padding: 1rem 0.7rem;    
 }
 
 .opciones-btn p{
@@ -306,13 +304,10 @@ a:hover{
 
 .text-footer{
     padding: 5px;
-    font-family: 'Marcellus', serif;
-    
-
+    font-family: 'Marcellus', serif;   
 }
 
-.contac-footer{
-    
+.contac-footer{    
     padding: 5px;
     margin-top: 5px;
     border-bottom: 1px solid var(--blanco);
@@ -320,22 +315,18 @@ a:hover{
     line-height:2rem;
 }
 
-
-
 .politicas-footer{
-    
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--blanco);
-    padding: 0.5rem;
-    
-
+    padding: 0.5rem;  
 }
+
 .politicas-footer p{
     font-size: 0.7rem;
 }
-.redes{
-    
+
+.redes{    
     padding-top: 0.5rem;
 }
 
@@ -349,12 +340,26 @@ a:hover{
     
     .logo-description{
         display: block;
-
+        padding: 1rem;
+        max-width: 100%;
     }
 
+    .logo-description img{
+        width: 100px;
+    }
 
+    #description{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-basis: 70% 30%;
+    }
 
-}
+    .text-description{
+        text-align: justify;
+        padding-right: 20px;
+    }
+}    
 
 /*punto quiebre media quiebre notebook 1024px*/
 @media screen and (min-width: 1024px){
@@ -362,10 +367,12 @@ a:hover{
     header{
         display: flex;
         justify-content: space-between;
-        background-color: var(--negro2);
+        background-color: var(--azulnegro);
+        padding: 0.3rem;
     }
     .logo{
-        flex-basis: 50%;
+        background-color: var(--azulnegro);
+        
     }
 
     .logo i{ /*ocultamos el icono hamburguesa*/
@@ -373,33 +380,43 @@ a:hover{
     }
 
     .logo img{
-        width: 100%;
+        width: 150px;
+        background-color: var(--azulnegro);
     }
 
     nav{
         flex-basis: 50%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-end;
         background-color: transparent;
-
     }
    
     nav a{
+        display: flex;
+        justify-content: space-around;
         text-decoration: none;
         color: var(--blanco);
         font-family: 'Marcellus', serif;
-        font-size: 1rem;
-        
+        font-size: 1.5rem;
+        padding: 0.5rem;        
+    }
+
+    .item{
+        padding: 1rem;
     }
    
+    .menu-item{
+        display: flex;
+        
+    }
+
     a:hover{
         background-color: transparent;
         width: auto;
         color: var(--azuloscuro);
     }
-
-    
+     
     .menu-hr{
         display: none;
     }
@@ -408,12 +425,105 @@ a:hover{
     .btn-menu{
         background-color: var(--azuloscuro);
         color: var(--blanco);
+        margin-right: 20px;
         padding: 0.5rem 1rem;
         font-family: 'Marcellus', serif;
         font-size: 1rem;
         border-radius: 5px;
         cursor: pointer;
     }
+
+    #description{
+        margin: 50px;
+    }
+
+    .text-description{
+        font-size: 1.3rem;
+        margin-right: 20px;
+    }
+
+    .logo-description img{
+        width: 180px;
+    }
+   
+    #feature h2{
+        font-size: 2rem;
+    }
+
+    .feature-box i{
+        font-size: 2rem;
+    }
+
+    .feature-box h3{
+        font-size: 1.2rem;
+    }
+
+    #ubicacion{
+        font-size: 2rem;
+    }
+
+    #ubicacion h2{
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+
+    .direccion_ubicacion{
+        border-bottom: none;
+    }
+
+    .ubicacion-hr{
+
+        background-color:var(--azuloscuro);
+        height: 2px;
+        width: 95%;
+        margin: 1rem 2rem;
+    }
+
+    .box-opciones{
+        display: flex;
+        flex-direction: row;   
+    }
+
+    #opiniones{
+        background-size: 90% 80%;
+        height: 50%;
+    }
+
+    #opiniones h3{
+        font-size: 2.5rem;
+    }
+
+    #footer{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .text-footer{
+        display: flex;
+        align-items: center;
+    }
+
+    .contac-footer{
+        border-top: transparent;
+        border-bottom:transparent;
+        margin:0 2rem;
+        line-height: 2rem;
+    }
+
+    .politicas-footer{
+        display: flex;
+        flex-direction: column;
+        border-bottom:transparent;
+        line-height: 2rem;
+    }
+
+
+
+    
+    
+    
 }
 /*Resolucion desktop 1308px*/
 @media screen and (min-width: 1328px){
